@@ -6,6 +6,16 @@ ThisBuild / homepage := Some(url("https://sangria-graphql.github.io/"))
 ThisBuild / licenses := Seq(
   "Apache License, ASL Version 2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0"))
 
+ThisBuild / developers := List(
+  Developer(
+    "nickhudkins",
+    "Nick Hudkins",
+    "nick+sangria@nickhudkins.com",
+    url("https://nickhudkins.com/")
+  )
+  // TODO: Add Anže in here!
+)
+
 ThisBuild / crossScalaVersions := Seq("2.12.13", "2.13.4")
 ThisBuild / scalaVersion := crossScalaVersions.value.last
 
