@@ -1,13 +1,9 @@
 package sangria.http.akka
 import akka.http.scaladsl.model.StatusCodes.{BadRequest, UnprocessableEntity}
-import org.scalatest.{FlatSpec, Matchers}
 import io.circe.Json
+import org.scalatest.flatspec.AnyFlatSpec
 
-class CirceGraphQLTest
-    extends FlatSpec
-    with Matchers
-    with GraphQLHttpSpec
-    with GraphQLHttpSpecRoute {
+class CirceGraphQLTest extends AnyFlatSpec with GraphQLHttpSpec with GraphQLHttpSpecRoute {
   import TestData._
   val path = s"/$graphQLPath"
 
