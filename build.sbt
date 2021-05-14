@@ -4,7 +4,7 @@ ThisBuild / organization := "org.sangria-graphql"
 ThisBuild / description := "Sangria Akka HTTP Support"
 ThisBuild / homepage := Some(url("https://sangria-graphql.github.io/"))
 ThisBuild / licenses := Seq(
-  "Apache License, ASL Version 2.0" -> url("http://www.apache.org/licenses/LICENSE-2.0"))
+  "Apache License, ASL Version 2.0" -> url("https://www.apache.org/licenses/LICENSE-2.0"))
 
 ThisBuild / developers := List(
   Developer(
