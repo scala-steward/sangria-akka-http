@@ -1,6 +1,6 @@
 package sangria.http.akka
 
-import java.nio.charset.Charset
+import java.nio.charset.StandardCharsets
 
 import akka.http.scaladsl.marshalling.{Marshaller, ToEntityMarshaller}
 import akka.http.scaladsl.model._
@@ -38,6 +38,6 @@ object GraphQLRequestUnmarshaller {
         case data =>
           import sangria.parser.DeliveryScheme.Throw
 
-          QueryParser.parse(data.decodeString(Charset.forName("UTF-8")))
+          QueryParser.parse(data.decodeString(StandardCharsets.UTF_8))
       }
 }
