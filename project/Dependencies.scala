@@ -1,5 +1,5 @@
 object Dependencies {
-  val akkaVersion = "2.6.14"
+  val akkaVersion = "2.6.19"
   val akkaHttpVersion = "10.2.9"
   val circeVersion = "0.14.1"
   object SangriaVersion {
