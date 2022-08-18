@@ -1,7 +1,5 @@
 package sangria.http.akka
 
-import java.nio.charset.StandardCharsets
-
 import akka.http.scaladsl.marshalling.{Marshaller, ToEntityMarshaller}
 import akka.http.scaladsl.model._
 import akka.http.scaladsl.unmarshalling.{FromEntityUnmarshaller, Unmarshaller}
@@ -10,7 +8,7 @@ import sangria.ast.Document
 import sangria.parser.QueryParser
 import sangria.renderer.{QueryRenderer, QueryRendererConfig}
 
-import scala.collection.immutable.Seq
+import java.nio.charset.StandardCharsets
 
 object GraphQLRequestUnmarshaller {
   val `application/graphql` =
@@ -36,8 +34,6 @@ object GraphQLRequestUnmarshaller {
       .map {
         case ByteString.empty => throw Unmarshaller.NoContentException
         case data =>
-          import sangria.parser.DeliveryScheme.Throw
-
-          QueryParser.parse(data.decodeString(StandardCharsets.UTF_8))
+          QueryParser.parse(data.decodeString(StandardCharsets.UTF_8)).fold(e => throw e, identity)
       }
 }
