@@ -4,7 +4,7 @@ import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
 
 import akka.http.scaladsl.model.ContentTypes
-import akka.http.scaladsl.model.{HttpEntity}
+import akka.http.scaladsl.model.HttpEntity
 import io.circe.Json
 
 object TestData {

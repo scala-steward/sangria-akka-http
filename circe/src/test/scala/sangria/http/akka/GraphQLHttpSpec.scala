@@ -102,8 +102,7 @@ trait GraphQLHttpSpecRoute extends CirceHttpSupport { this: Suite =>
   implicit def executor: ExecutionContext
 
   val graphQLPath = "graphql"
-  val route: Route = {
-
+  val route: Route =
     path(graphQLPath) {
       prepareGraphQLRequest {
         // Yes, there is a `.get` here, and if this throws
@@ -127,5 +126,4 @@ trait GraphQLHttpSpecRoute extends CirceHttpSupport { this: Suite =>
       (get & pathEndOrSingleSlash) {
         redirect(s"/$graphQLPath", PermanentRedirect)
       }
-  }
 }
