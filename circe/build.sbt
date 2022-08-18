@@ -11,5 +11,5 @@ libraryDependencies ++= Seq(
   "com.typesafe.akka" %% "akka-http" % akkaHttpVersion % Test,
   "com.typesafe.akka" %% "akka-stream-testkit" % akkaVersion % Test,
   "com.typesafe.akka" %% "akka-http-testkit" % akkaHttpVersion % Test,
-  "io.circe" %% "circe-optics" % circeVersion % Test
+  "io.circe" %% "circe-optics" % circeOpticsVersion % Test
 )
