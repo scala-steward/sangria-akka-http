@@ -6,6 +6,6 @@ object Dependencies {
   object SangriaVersion {
     val sangria = "3.5.3"
     val sangriaCirce = "1.3.2"
-    val sangriaSlowlog = "2.0.5"
+    val sangriaSlowlog = "3.0.0"
   }
 }
